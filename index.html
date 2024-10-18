@@ -1,64 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-
-scale=1.0">
-
-<title>Colégio Helena</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colégio Helena</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<nav class="navbar">
-<div class="logo">
-<img src="Logo.png" alt="Logo">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="#">Cursos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="#">Formação de Docentes</a></li>
+                        <li><a href="#">Química para Empresas</a></li>
+                        <li><a href="#">Ensino Regular</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contatos</a></li>
+            </ul>
+            <div class="social-links">
+                <img src="insta.png" href="https://www.instagram.com" target="_blank" alt="Instagram"></a>
+                <img src="face.png" href="https://www.facebook.com" target="_blank"alt="Facebook"></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="01.png" alt="Imagem 1">
+            <img src="2.png" alt="Imagem 2">
+            <img src="3.png" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+    </div>
+
 </div>
-<ul class="menu">
-<li><a href="#" class="active">Home</a></li>
-<li><a href="#">Quem Somos</a></li>
-<li class="dropdown">
-<a href="#">Cursos</a>
-<ul class="dropdown-content">
-<li><a href="#">Desenvolvimento de
+<script src="script.js"></script>
 
-Sistemas</a></li>
-<li><a href="#">Front-end</a></li>
-<li><a href="#">Banco de Dados</a></li>
-<li><a href="#">Ciencia da computação</a></li>
-<li><a href="#">Analise de Sistemas</a></li>
-<li><a href="#">Programação Mobile</a></li>
-<li><a href="#">Ensino Regular</a></li>
-</ul>
-</li>
-<li><a href="#">Contatos</a></li>
-</ul>
-<div class="social-links">
-<img src="insta.png"
-
-href="https://www.instagram.com" target="_blank">
-
-<img src="face.png" href="https://www.facebook.com"
-
-target="_blank">
-let currentIndex = 0;
-
-        function moveCarousel(direction) {
-            const images = document.querySelector('.carousel-images');
-            const totalImages = images.children.length;
-            currentIndex += direction;
-
-            if (currentIndex < 0) {
-                currentIndex = totalImages - 1; // Vai para a última imagem
-            } else if (currentIndex >= totalImages) {
-                currentIndex = 0; // Volta para a primeira imagem
-            }
-
-            const offset = -currentIndex * 100; // Move o carrossel
-            images.style.transform = `translateX(${offset}%)`;
-        }
-</div>
-</nav>
-</header>
-</body> </html>
+</body>
+</html>
